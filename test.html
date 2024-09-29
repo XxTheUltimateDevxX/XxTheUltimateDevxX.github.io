@@ -1,0 +1,30 @@
+
+<div class="container">
+    <h1 class="text-center pb-4">M&S Discount Bot</h1>
+    <button class="theme-toggle-btn" onclick="toggleTheme()">Switch to Dark Mode</button>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <h1 class="text-center">Generate Your Barcode</h1>
+
+                <form method="post" action="">
+                    <div class="mb-3">
+                        <label for="barcode_text" class="form-label">Enter barcode:</label>
+                        <input type="text" id="barcode_text" name="barcode_text" class="form-control" required
+                            value="<?= isset($inputText) ? htmlspecialchars($inputText) : '' ?>" placeholder="e.g., 1234">
+                    </div>
+
+                              <!-- Add the warning message -->
+                <div class="text-start pb-1 ">
+                    <small style="color:green">8 digit barcodes only!</small>
+                </div>
+
+
+                    <button type="submit" class="btn btn-primary">Generate Barcode</button>
+                </form>
+
+                <a id="downloadButton" href="#" download="barcode.png" class="btn btn-success w-100 mt-3" style="display:none;">Download Barcode</a>
+            </div>
+        </div>
+    </div>
+</div>
